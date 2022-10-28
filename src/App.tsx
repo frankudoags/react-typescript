@@ -1,9 +1,17 @@
-import React from 'react';
 
-  export default function App() {
-    return (
-      <h1 className="text-3xl font-bold underline text-red-800">
-        Hello world!
-      </h1>
-    )
-  }
+import React from 'react';
+import { Navbar, Home } from "./components"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
